@@ -5,15 +5,19 @@ import { ThemeContext } from './ThemeContext';
 import './App.css';
 import { Academico } from './components/Academico';
 import Interesses from './components/Interesses';
+import Sobre from './components/Sobre';
 import Contato from './components/Contato';
-
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+</style>
 const App: React.FC = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [activeComponent, setActiveComponent] = useState<string>('Sobre');
 
   const renderComponent = () => {
     switch (activeComponent) {
-      
+      case 'Sobre':
+        return <Sobre/>;
       case 'Acadêmico':
         return <Academico />;
       case 'Interesses':
@@ -31,7 +35,7 @@ const App: React.FC = () => {
         <div className="menu">
           <a href="#" onClick={() => setActiveComponent('Sobre')}>Sobre</a>
           <a href="#" onClick={() => setActiveComponent('Acadêmico')}>Acadêmico</a>
-          <a href="#" onClick={() => setActiveComponent('Interesses')}>Interesses/Áreas de pesquisa</a>
+          <a href="#" onClick={() => setActiveComponent('Interesses')}>Áreas de pesquisa</a>
           <a href="#" onClick={() => setActiveComponent('Contato')}>Contato</a>
           <label className="switch">
             <input type="checkbox" checked={theme === 'dark'} onChange={toggleTheme} />

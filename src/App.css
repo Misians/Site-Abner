@@ -1,0 +1,57 @@
+
+.app{
+  width: 201vh;
+  height: 100%;
+}
+.app.light {
+  background-color: white;
+  color: rgb(22, 22, 22);
+}
+
+.app.light .menu{
+  background: rgb(247,247,247);
+background: -moz-linear-gradient(144deg, rgba(247,247,247,1) 0%, rgba(238,238,238,1) 25%, rgba(252,252,252,1) 100%);
+background: -webkit-linear-gradient(144deg, rgba(247,247,247,1) 0%, rgba(238,238,238,1) 25%, rgba(252,252,252,1) 100%);
+background: linear-gradient(144deg, rgba(247,247,247,1) 0%, rgba(238,238,238,1) 35%, rgba(252,252,252,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endColorstr="#fcfcfc",GradientType=1);
+}
+.app.dark .menu{
+  background-color: #0A0A0A;
+}
+.app.dark {
+  background-color: black;
+
+  color: rgb(228, 228, 228);
+}
+.corpo{
+  background-color: #f90000;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  width: 100%;
+}
+.menu{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.app.light a{
+  color: #161616;
+}
+.app.dark a{
+  color: #a8a8a8;
+}
+
+.app.light .toggle-button {
+  background-color: #424242;
+  color: #fff;
+}
+
+.app.dark .infos{
+  /* background-color:#0A0A0A ; */
+}
+.app.dark .toggle-button {
+  background-color: #dfdfdf;
+  color: #000;
+}

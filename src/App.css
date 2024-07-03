@@ -2,6 +2,8 @@
 .app{
   width: 100%;
   height: 100%;
+  font-family: "Poppins", sans-serif;
+
 }
 .app.light {
   background-color: white;
@@ -35,9 +37,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endCo
 
 
 }
-.info-abner{
+.text-abner{
   margin-top: 40px;
+  font-family: "Poppins", sans-serif;
   gap: 30px;
+  font-weight: 600;
+  text-align: center;
   width: 90%;
   display: flex;
   padding: 40px;
@@ -45,27 +50,60 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endCo
   border: 0;
   text-decoration: none;
   border-radius: 15px;
-  background-color: rgba(255,255,255,0.15);
+  background-color: rgba(255,255,255,0.25);
   border: 1px solid rgba(255,255,255,0.1);
   backdrop-filter: blur(30px);
   color: rgba(37, 37, 37, 0.8);
   font-size: 14px;
   letter-spacing: 2px;
-  cursor: pointer;
   text-transform: uppercase;
 }
-
+.info-abner img{
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.1);
+}
 .info-acad{
   padding: 20px;
   display: block;
+}
+.block{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+h3{
+  color: #757575;
+  text-align: center;
+}
+h5{
+  color: #757575;
+  text-align: center;
 }
 .formacao{
   display: flex;
   gap: 20px;
   text-align: justify;
+  margin-bottom: 20px;
+  padding: 24px 32px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(255,255,255,0.25);
+  border: 1px solid rgba(238, 238, 238, 0.7);
+  backdrop-filter: blur(30px);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  align-items: center;
+  text-transform: uppercase;
 }
 .formacao p{
   width: 70%;
+}
+.app.light h4{
+  color: #797979;
 }
 .ano{
   width: 10%;
@@ -82,6 +120,22 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endCo
 }
 .app.light a{
   color: #161616;
+}
+.infos{
+  width: 100%;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+}
+.infos img{
+  
+  background-color: #161616;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  
 }
 .app.dark a{
   color: #a8a8a8;
@@ -112,6 +166,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endCo
 
 .menu a{display: inline-block;
   padding: 24px 32px;
+  font-family: "Poppins", sans-serif;
+
   border: 0;
   text-decoration: none;
   border-radius: 15px;

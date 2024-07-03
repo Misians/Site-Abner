@@ -6,6 +6,7 @@ export const Academico = () => {
       <h3>Formação acadêmica/titulação</h3>
       <div className="formacao">
         <div className="ano"><h5>2008 - 2012</h5></div>
+        <h4>●</h4>
         
         <p>
         Doutorado em Engenharia Elétrica.
@@ -18,7 +19,7 @@ export const Academico = () => {
       </div>
       <div className="formacao">
         <div className="ano"><h5>2002 - 2008</h5></div>
-        
+        <h4>●</h4>
         <p>
           Mestrado em Engenharia Elétrica.
           Universidade Federal do Rio Grande do Norte, UFRN, Brasil.
@@ -31,7 +32,7 @@ export const Academico = () => {
       </div>
       <div className="formacao">
         <div className="ano"><h5>2008 - 2012</h5></div>
-        
+        <h4>●</h4>
         <p>
         Doutorado em Engenharia Elétrica.
         Universidade Federal do Rio Grande do Norte, UFRN, Brasil.
@@ -43,7 +44,7 @@ export const Academico = () => {
       </div>
       <div className="formacao">
         <div className="ano"><h5>2001 - 2005</h5></div>
-        
+        <h4>●</h4>
         <p>Graduação em Engenharia de Computação.
           Universidade Federal do Rio Grande do Norte, UFRN, Brasil.
           Título: Construção e Teleoperação de uma Plataforma Robótica Móvel.
@@ -55,7 +56,7 @@ export const Academico = () => {
         <div className="ano">
           <h5>1996-2000</h5>
         </div>
-        
+        <h4>●</h4>
         <p>Curso técnico/profissionalizante em Eletromecânica.
         Centro Federal de Educação Tecnológica  do Rio Grande do Norte, CEFET-RN, Brasil.
         </p>
@@ -64,7 +65,7 @@ export const Academico = () => {
         <div className="ano">
           <h5>1996-2000</h5>
         </div>
-        
+        <h4>●</h4>
         <p>Ensino Médio (2º grau).
         Centro Federal de Educação Tecnológica do Rio Grande do Norte, CEFET-RN, Brasil.
         </p>

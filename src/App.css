@@ -1,13 +1,13 @@
 
 .app{
-  width: 201vh;
+  width: 100%;
   height: 100%;
 }
 .app.light {
   background-color: white;
   color: rgb(22, 22, 22);
 }
-
+/* */
 .app.light .menu{
   background: rgb(247,247,247);
 background: -moz-linear-gradient(144deg, rgba(247,247,247,1) 0%, rgba(238,238,238,1) 25%, rgba(252,252,252,1) 100%);
@@ -24,11 +24,29 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endCo
   color: rgb(228, 228, 228);
 }
 .corpo{
-  background-color: #f90000;
   height: 100%;
   margin: 0;
   display: flex;
   width: 100%;
+}
+.info-acad{
+  padding: 20px;
+  display: block;
+}
+.formacao{
+  display: flex;
+  gap: 20px;
+  text-align: justify;
+}
+.formacao p{
+  width: 80%;
+}
+.ano{
+  width: 10%;
+  display: flex;
+  text-align: end;
+  align-items: center;
+  justify-content: end;
 }
 .menu{
   padding: 20px;

@@ -35,10 +35,17 @@ const Sobre: React.FC = () => {
           
         </p>
         </div>
-        <div className="dir">
+        <div className="dir centro">
           <h3>{language === 'en' ? 'Resarch Lines ': 'Linhas de Pesquisa'}</h3>          
-          <p>Lattes: <a href="http://lattes.cnpq.br/2563070123322776">ID 2563070123322776</a></p>
-          <p>Orcid: <a href="https://orcid.org/0000-0001-6353-8674">ID 0000-0001-6353-8674</a></p>
+          <div className="formacao widht">
+            Sistemas Embarcados
+          </div>
+          <div className="formacao widht">
+            Robótica Móvel
+          </div>
+          <div className="formacao widht">
+            Visão Computacional
+          </div>
         </div>
       </div>
 

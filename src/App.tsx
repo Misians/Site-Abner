@@ -10,7 +10,6 @@ import { Academico } from './components/Academico';
 import Interesses from './components/Interesses';
 import Sobre from './components/Sobre';
 import Projetos from './components/Projetos';
-import Contato from './components/Contato';
 import { useLanguage } from './LanguageContext';
 
 <style>
@@ -32,8 +31,7 @@ const App: React.FC = () => {
         return <Interesses />;
       case 'Projetos':
         return <Projetos />;
-      case 'Contato':
-        return <Contato />;
+      
       default:
         return <Sobre />;
     }

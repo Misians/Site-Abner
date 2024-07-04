@@ -185,6 +185,18 @@ h5{
   background-color: #424242;
   color: #fff;
 }
+.contato{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.dir{
+  text-align: left;
+}
+.contato a{
+  text-decoration: none;
+  font-weight: 500;
+}
 
 .app.dark .infos{
   /* background-color:#0A0A0A ; */

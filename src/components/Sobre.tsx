@@ -17,6 +17,7 @@ const Sobre: React.FC = () => {
           
           <a href="https://portal.uern.br/">{language === 'en' ? 'Member of ': 'Membro da'}{language === 'en' ? 'State University Of Rio Grande do Norte' : 'Universidade do Estado do Rio Grande do Norte'}</a>
           <p>Lattes: <a href="http://lattes.cnpq.br/2563070123322776">ID 2563070123322776</a></p>
+          <p>Orcid: <a href="https://orcid.org/0000-0001-6353-8674">ID 0000-0001-6353-8674</a></p>
         </div>
       </div>
       <p className='text-abner'>
@@ -27,7 +28,21 @@ const Sobre: React.FC = () => {
         )}
       </p>
 
-      <h3>{language === 'en' ? 'My hobbies include:' : 'Meus hobbies incluem:'}</h3>
+      <div className="dividir">
+        <div className="esq">
+        <h3>{language === 'en' ? '🏆 Awards': '🏆 Premiações'}</h3>          
+        <p>{language === 'en' ? '' : 'Segundo lugar do prêmio Jabuti da Câmara Brasileira do Livro, com o livro Robótica Móvel na categoria Engenharias, Tecnologias e Informática., Câmara Brasileira do Livro.'}
+          
+        </p>
+        </div>
+        <div className="dir">
+          <h3>{language === 'en' ? 'Resarch Lines ': 'Linhas de Pesquisa'}</h3>          
+          <p>Lattes: <a href="http://lattes.cnpq.br/2563070123322776">ID 2563070123322776</a></p>
+          <p>Orcid: <a href="https://orcid.org/0000-0001-6353-8674">ID 0000-0001-6353-8674</a></p>
+        </div>
+      </div>
+
+
 
       {/* <Card 
         title={language === 'en' ? 'Fishing' : 'Pescaria'}

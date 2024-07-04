@@ -192,7 +192,21 @@ h5{
 }
 .dir{
   text-align: left;
+  align-content: baseline;
+  width: 50%;
+  padding-left: 30px;
+  text-align: justify;
 }
+.esq{
+  align-content: baseline;
+ 
+  
+  width:50%;
+}
+.dividir{
+  display: flex;
+}
+
 .contato a{
   text-decoration: none;
   font-weight: 500;

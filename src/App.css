@@ -112,6 +112,13 @@ h5{
   align-items: center;
   justify-content: end;
 }
+.ano2{
+  display: flex;
+  font-size: 16px;
+  text-align: justify;
+  align-items: center;
+  justify-content: end;
+}
 .menu{
   padding: 20px;
   display: flex;
@@ -129,8 +136,31 @@ h5{
   text-align: center;
   align-self: center;
 }
+.divproj{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.projetos{
+  display: flex;
+  margin: 10px;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  max-width: 400px;
+
+  padding: 24px 32px;
+  border-radius: 15px;
+  background-color: rgba(255,255,255,0.25);
+  border: 1px solid rgba(238, 238, 238, 0.7);
+  backdrop-filter: blur(30px);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  align-items: center;
+  text-transform: uppercase;
+}
 .infos img{
-  
   background-color: #161616;
   border-radius: 50%;
   width: 150px;
@@ -163,7 +193,12 @@ h5{
   font-family: "Inter", sans-serif;
   font-weight: 600;
 }
-
+.language-switch img{
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+}
 .menu a{display: inline-block;
   padding: 24px 32px;
   font-family: "Poppins", sans-serif;

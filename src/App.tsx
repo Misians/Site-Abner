@@ -7,10 +7,9 @@ import brasil from './components/brasil.png';
 import { ThemeContext } from './ThemeContext';
 import './App.css';
 import { Academico } from './components/Academico';
-import Interesses from './components/Interesses';
 import Sobre from './components/Sobre';
+import Publicacoes from './components/Publicacoes';
 import Projetos from './components/Projetos';
-import Contato from './components/Contato';
 import { useLanguage } from './LanguageContext';
 
 <style>
@@ -28,12 +27,10 @@ const App: React.FC = () => {
         return <Sobre />;
       case 'Acadêmico':
         return <Academico />;
-      case 'Interesses':
-        return <Interesses />;
       case 'Projetos':
         return <Projetos />;
-      case 'Contato':
-        return <Contato />;
+      case 'Publicacoes':
+        return <Publicacoes />;
       default:
         return <Sobre />;
     }
@@ -60,7 +57,7 @@ const App: React.FC = () => {
             {language === 'en' ? 'Research Areas' : 'Áreas de Pesquisa'}
           </a>
           <a href="#" onClick={() => setActiveComponent('Contato')}>
-            {language === 'en' ? 'Contact' : 'Contato'}
+            {language === 'en' ? 'Publicações' : 'Publicações'}
           </a>
           <label className="switch">
             <input type="checkbox" checked={theme === 'dark'} onChange={toggleTheme} />

@@ -9,6 +9,29 @@
   background-color: white;
   color: rgb(22, 22, 22);
 }
+.interesses h4{
+  padding: 11px 26px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 40px;
+  padding: 24px 32px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.384);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(37, 37, 37, 0.8);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.interesses{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 /* */
 /* .app.light .menu{
   background: rgb(247,247,247);
@@ -18,14 +41,14 @@ background: linear-gradient(144deg, rgba(247,247,247,1) 0%, rgba(238,238,238,1) 
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endColorstr="#fcfcfc",GradientType=1);
 } */
 .app.dark .menu{
-  background-color: #0A0A0A;
+  background-color: transparent;
 }
 .app.dark {
-  background-color: black;
+  background-color: rgb(255, 245, 245);
 
   color: rgb(228, 228, 228);
 }
-.corpo{
+.app.light .corpo {
   margin: 0;
   display: flex;
 
@@ -34,9 +57,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endCo
   background: -webkit-linear-gradient(126deg, rgba(208,230,232,1) 2%, rgba(247,247,247,1) 38%, rgba(255,250,207,1) 100%);
   background: linear-gradient(126deg, rgba(208,230,232,1) 2%, rgba(247,247,247,1) 38%, rgba(255,250,207,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d0e6e8",endColorstr="#fffacf",GradientType=1);
-
-
 }
+.app.dark .corpo {
+  margin: 0;
+  display: flex;
+
+  background: rgb(23,22,22);
+background: linear-gradient(90deg, rgba(23,22,22,1) 0%, rgba(23,8,23,1) 50%, rgba(15,15,22,1) 97%);
+}
+
 .text-abner{
   margin-top: 40px;
   font-family: "Poppins", sans-serif;
@@ -126,7 +155,16 @@ h5{
   gap: 30px;
 }
 .app.light a{
-  color: #161616;
+  color: #757575;
+}
+.app.dark h3{
+  color: #888888;
+}
+.app.dark h2{
+  color: #7a7a7a;
+}
+.app.dark p{
+  color: #7e7e7e;
 }
 .infos{
   width: 100%;
@@ -176,11 +214,9 @@ h5{
   color: #fff;
 }
 
-.app.dark .infos{
-  /* background-color:#0A0A0A ; */
-}
+
 .app.dark .toggle-button {
-  background-color: #dfdfdf;
+  background-color: #0a0909;
   color: #000;
 }
 .menu{
@@ -202,7 +238,6 @@ h5{
 .menu a{display: inline-block;
   padding: 24px 32px;
   font-family: "Poppins", sans-serif;
-
   border: 0;
   text-decoration: none;
   border-radius: 15px;

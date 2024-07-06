@@ -9,7 +9,7 @@
   background-color: white;
   color: rgb(22, 22, 22);
 }
-.interesses h4{
+.app.light .interesses h4{
   padding: 11px 26px;
   border-radius: 4px;
   font-weight: 600;
@@ -23,6 +23,24 @@
   border: 1px solid rgba(255,255,255,0.1);
   backdrop-filter: blur(30px);
   color: rgba(37, 37, 37, 0.8);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.app.dark .interesses h4{
+  padding: 11px 26px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 40px;
+  padding: 24px 32px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(199, 199, 199, 0.8);
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -179,7 +197,7 @@ h5{
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.projetos{
+.app.light .projetos{
   display: flex;
   margin: 10px;
   flex-direction: column;
@@ -197,6 +215,29 @@ h5{
   cursor: pointer;
   align-items: center;
   text-transform: uppercase;
+}
+.app.dark .ano2 h5, .app.dark  p{
+  color: rgb(185, 185, 185);
+}
+.app.dark .projetos {
+  display: flex;
+  margin: 10px;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  max-width: 400px;
+
+  padding: 24px 32px;
+  border-radius: 15px;
+  background-color: rgba(255,255,255,0.25);
+  border: 1px solid rgba(100, 100, 100, 0.7);
+  backdrop-filter: blur(30px);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  align-items: center;
+  text-transform: uppercase;
+  color: #c9c9c9;
 }
 .infos img{
   background-color: #161616;

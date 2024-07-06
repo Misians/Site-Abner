@@ -29,8 +29,12 @@ const App: React.FC = () => {
         return <Academico />;
       case 'Projetos':
         return <Projetos />;
+<<<<<<< HEAD
       case 'Publicacoes':
         return <Publicacoes />;
+=======
+      
+>>>>>>> dc4f8c8e42e3f4d837db3154df4cbb9aa3957a8f
       default:
         return <Sobre />;
     }

@@ -282,9 +282,9 @@ h5{
   color: #000;
 }
 .menu{
-  height: 100vh;
   padding: 30px;
   font-size: 22px;
+  height: 100vh;
   min-width: fit-content;
   gap: 40px;
   justify-content: center;
@@ -314,5 +314,56 @@ h5{
 }
 .menu a:hover{
   background-color: rgba(255,255,255,0.3);
+}
+
+@media (max-width: 830px) {
+  .menu {
+    flex-direction: row;
+    align-items: flex-start;
+    height: 10vh;
+    margin: 0;
+    gap: 5;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  
+
+  .switch {
+    margin: 10px 0;
+  }
+  .corpo{
+    display: flex;
+    flex-direction: column;
+  }
+  .app.light .corpo {
+    margin: 0;
+    display: flex;
+    background: rgb(208,230,232);
+    }
+  .app.dark .corpo {
+    margin: 0;
+    display: flex;
+    background: rgb(23,22,22);
+  }
+  .language-switch {
+    margin-top: 10px;
+  }
+  .menu a{display: inline-block;
+    font-family: "Poppins", sans-serif;
+    
+    padding: 10px 12px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: lowercase;
+  }
 }
 

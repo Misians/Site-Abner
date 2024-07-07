@@ -1,6 +1,4 @@
 import React from 'react';
-// import Card from './Card';
-// import abner2 from './abner2.jfif';
 import { useLanguage } from '../LanguageContext';
 
 const Sobre: React.FC = () => {

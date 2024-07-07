@@ -50,12 +50,12 @@ const App: React.FC = () => {
           <a href="#" onClick={() => setActiveComponent('Acadêmico')}>
             {language === 'en' ? 'Academic' : 'Acadêmico'}
           </a>
-          <a href="#" onClick={() => setActiveComponent('Interesses')}>
+          {/* <a href="#" onClick={() => setActiveComponent('Interesses')}>
             {language === 'en' ? 'Research Areas' : 'Áreas de Pesquisa'}
           </a>
           <a href="#" onClick={() => setActiveComponent('Contato')}>
             {language === 'en' ? 'Publicações' : 'Publicações'}
-          </a>
+          </a> */}
           <label className="switch">
             <input type="checkbox" checked={theme === 'dark'} onChange={toggleTheme} />
             <span className="slider round"></span>

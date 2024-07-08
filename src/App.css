@@ -90,7 +90,7 @@ background: linear-gradient(90deg, rgba(23,22,22,1) 0%, rgba(23,8,23,1) 50%, rgb
   gap: 30px;
   font-weight: 600;
   text-align: center;
-  width: 90%;
+  width: 80%;
   display: flex;
   padding: 40px;
   padding: 24px 32px;
@@ -364,6 +364,23 @@ h5{
     letter-spacing: 1px;
     cursor: pointer;
     text-transform: lowercase;
+  }
+  .formacao{
+    display: flex;
+    flex-direction: column;
+  }
+  .formacao p{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .ano{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .text-abner{
+    max-width: fit-content;
   }
 }
 

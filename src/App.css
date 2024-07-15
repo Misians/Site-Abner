@@ -241,6 +241,10 @@ h5{
 .app.dark .ano2 h5, .app.dark  p{
   color: rgb(185, 185, 185);
 }
+.images img{
+  width: 100%;
+  border-radius: 0;
+}
 .app.dark .projetos {
   display: flex;
   margin: 10px;
@@ -261,7 +265,11 @@ h5{
   text-transform: uppercase;
   color: #c9c9c9;
 }
-.infos img{
+
+.app.dark a{
+  color: #a8a8a8;
+}
+.imageabner{
   background-color: #161616;
   border-radius: 100%;
 
@@ -271,10 +279,19 @@ h5{
   transform: rotate(-90deg);
   
 }
-.app.dark a{
-  color: #a8a8a8;
+.images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-
+.images img{
+  object-fit: cover;
+  height: auto;
+  max-width: 600px;
+}
 .app.light .toggle-button {
   background-color: #424242;
   color: #fff;
@@ -385,6 +402,16 @@ h5{
   }
   .text-abner{
     max-width: fit-content;
+  }
+  .images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 20px;
+    flex-direction: column;
+    width: auto;
+    gap: 10px;
   }
 }
 

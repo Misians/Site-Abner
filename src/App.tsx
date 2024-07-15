@@ -66,7 +66,7 @@ const App: React.FC = () => {
           </div>
         </div>
         <div className="infos">
-          <img src={abner} alt="" />
+          <img className='imageabner' src={abner} alt="" />
           <div className="info-abner">
             <div className="block">
               <div className="nome">

@@ -72,11 +72,13 @@ const Projetos: React.FC = () => {
           </p>
         </div> */}
       </div>
-      {/* <div className="images">
+      
+      <h3>LAR (LABORATORIO DE APRENDIZAGEM E ROBÓTICA)</h3>
+      <div className="images">
         <img src={laboratorio} alt="" />
         <img src={abner} alt="" />
 
-      </div> */}
+      </div>
     </div>
   );
 }

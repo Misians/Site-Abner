@@ -71,7 +71,7 @@ const App: React.FC = () => {
             <div className="block">
               <div className="nome">
                 <h2>{language === 'en' ? 'Dr. Anderson Abner de Santana Souza' : 'Dr. Anderson Abner de Santana Souza'}</h2>
-                <p>{language === 'en' ? 'Computer Science Professor' : 'Professor de Ciência da Computação'}</p>
+                <p>{language === 'en' ? 'Computer Science Professor | UERN' : 'Professor de Ciência da Computação | UERN'}</p>
               </div>
             </div>
           </div>
@@ -80,7 +80,12 @@ const App: React.FC = () => {
           </div>
         </div>
       </div>
+      <div className="footer">
+              <p>Desenvolvido por <a href="https://github.com/Misians">Artemísia K. 👩‍💻</a> </p>
+
+      </div>
     </div>
+    
   );
 };
 

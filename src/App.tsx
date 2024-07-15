@@ -1,6 +1,6 @@
 // App.tsx
 import React, { useState, useContext } from 'react';
-import abner from './abner.gif';
+import abner from './components/an.png';
 import './switch.css';
 import ingles from './components/inglaterra.png';
 import brasil from './components/brasil.png';
@@ -66,7 +66,7 @@ const App: React.FC = () => {
           </div>
         </div>
         <div className="infos">
-          <img width={180} src={abner} alt="" />
+          <img src={abner} alt="" />
           <div className="info-abner">
             <div className="block">
               <div className="nome">

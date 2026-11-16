@@ -47,24 +47,6 @@ export const Academico: React.FC = () => {
       </div>
       
       <div className="formacao">
-        <div className="ano"><h5>2008 - 2012</h5></div>
-        <h4>●</h4>
-        <p>
-          {language === 'en' ? 'Ph.D. in Electrical Engineering.' : 'Doutorado em Engenharia Elétrica.'}
-          <br />
-          {language === 'en' ? 'Federal University of Rio Grande do Norte, UFRN, Brazil.' : 'Universidade Federal do Rio Grande do Norte, UFRN, Brasil.'}
-          <br />
-          {language === 'en' ? 'Title: 2.5-D Robotic Mapping with Elevation-Occupation Grid Representation, Year of Completion: 2012.' : 'Título: Mapeamento Robótico 2,5-D com Representação em Grade de Ocupação-Elevação, Ano de obtenção: 2012.'}
-          <br />
-          {language === 'en' ? 'Advisor: Luiz Marcos Garcia Gonçalves.' : 'Orientador: Luiz Marcos Garcia Gonçalves.'}
-          <br />
-          {language === 'en' ? 'Scholarship: National Council for Scientific and Technological Development, CNPq, Brazil.' : 'Bolsista do(a): Conselho Nacional de Desenvolvimento Científico e Tecnológico, CNPq, Brasil.'}
-          <br />
-          {language === 'en' ? 'Major area: Others' : 'Grande área: Outros'}
-        </p>
-      </div>
-      
-      <div className="formacao">
         <div className="ano"><h5>2001 - 2005</h5></div>
         <h4>●</h4>
         <p>

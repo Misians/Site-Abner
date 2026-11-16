@@ -11,10 +11,6 @@ import Sobre from './components/Sobre';
 import Projetos from './components/Projetos';
 import { useLanguage } from './LanguageContext';
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-</style>
-
 const App: React.FC = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [activeComponent, setActiveComponent] = useState<string>('Sobre');

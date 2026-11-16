@@ -15,7 +15,7 @@ const Sobre: React.FC = () => {
           'Doutorado em Engenharia da Computação pela Universidade Federal do Rio Grande do Norte (UFRN), Natal RN Brasil (2012), Mestrado em Engenharia Elétrica pela Universidade Federal do Rio Grande do Norte (UFRN), Natal RN Brasil (2008), Graduação em Engenharia de Computação pela Universidade Federal do Rio Grande do Norte (UFRN), Natal RN Brasil (2005). Atualmente é Professor Adjunto do Departamento de Computação da Universidade do Estado do Rio Grande do Norte, Campus Natal. Atua principalmente nos seguintes temas: robótica móvel, visão computacional, filtragem estocástica, sistemas embarcados e inteligência artificial.'
         )}
       </p>
-      <h3>{language === 'en' ? 'Interesses ' : 'Publicações e participações:'}</h3>
+      <h3>{language === 'en' ? 'Research Areas & Interests' : 'Áreas de Pesquisa e Interesse'}</h3>
       <div className="interesses">
           
           <h4>ROBÓTICA EDUCACIONAL</h4>

@@ -94,7 +94,7 @@ const App: React.FC = () => {
           </div>
         </nav>
         <div className="infos">
-          <img className='imageabner' src={abner} alt="Dr. Anderson Abner de Santana Souza" />
+          <img className='imageabner' src={abner} alt="Dr. Anderson Abner de Santana Souza" decoding="async" />
           <div className="info-abner">
             <div className="block">
               <div className="nome">

@@ -67,10 +67,14 @@ const Projetos: React.FC = () => {
       <div className="images">
         <img
           src={laboratorio}
+          loading="lazy"
+          decoding="async"
           alt={language === 'en' ? 'Learning and Robotics Laboratory (LAR)' : 'Laboratório de Aprendizagem e Robótica (LAR)'}
         />
         <img
           src={abner}
+          loading="lazy"
+          decoding="async"
           alt={language === 'en' ? 'Dr. Anderson Abner at the Learning and Robotics Laboratory' : 'Dr. Anderson Abner no Laboratório de Aprendizagem e Robótica'}
         />
 

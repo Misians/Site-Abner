@@ -1,5 +1,5 @@
 // App.tsx
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import abner from './components/an.png';
 import './switch.css';
 import ingles from './components/inglaterra.png';
@@ -14,65 +14,27 @@ import { useLanguage } from './useLanguage';
 
 const App: React.FC = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
-  const [activeComponent, setActiveComponent] = useState<string>('Sobre');
   const { language, setLanguage } = useLanguage();
-
-  const renderComponent = () => {
-    switch (activeComponent) {
-      case 'Sobre':
-        return <Sobre />;
-      case 'Acadêmico':
-        return <Academico />;
-      case 'Projetos':
-        return <Projetos />;
-      default:
-        return <Sobre />;
-    }
-  };
-
-  const handleLanguageChange = (lang: string) => {
-    setLanguage(lang);
-  };
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, section: string) => {
-    e.preventDefault();
-    setActiveComponent(section);
-  };
 
   return (
     <div className={`app ${theme}`}>
-      <header className="topbar-wrapper">
-        <div className="topbar">
-          <div className="brand-pill">
-            <span className="brand-dot" aria-hidden="true">☁️</span>
-            <span>Dr. Abner</span>
-          </div>
+      <header className="minimal-header">
+        <div className="minimal-header-inner">
+          <a href="#top" className="brand-mark">
+            <span className="telemetry-dot" aria-hidden="true" />
+            <span>Dr. Abner • UERN</span>
+          </a>
 
-          <nav className="menu" aria-label={language === 'en' ? 'Main navigation' : 'Navegação principal'}>
-            <a
-              href="#sobre"
-              aria-current={activeComponent === 'Sobre' ? 'page' : undefined}
-              onClick={(e) => handleNavClick(e, 'Sobre')}
-            >
-              {language === 'en' ? 'About' : 'Sobre'}
-            </a>
-            <a
-              href="#projetos"
-              aria-current={activeComponent === 'Projetos' ? 'page' : undefined}
-              onClick={(e) => handleNavClick(e, 'Projetos')}
-            >
-              {language === 'en' ? 'Projects' : 'Projetos'}
-            </a>
-            <a
-              href="#academico"
-              aria-current={activeComponent === 'Acadêmico' ? 'page' : undefined}
-              onClick={(e) => handleNavClick(e, 'Acadêmico')}
-            >
-              {language === 'en' ? 'Academic' : 'Acadêmico'}
-            </a>
-          </nav>
+          <div className="header-controls">
+            <nav className="inline-anchors" aria-label={language === 'en' ? 'Page sections' : 'Seções da página'}>
+              <a href="#sobre">{language === 'en' ? 'About' : 'Sobre'}</a>
+              <a href="#publicacoes">{language === 'en' ? 'Publications' : 'Publicações'}</a>
+              <a href="#projetos">{language === 'en' ? 'Projects' : 'Projetos'}</a>
+              <a href="#academico">{language === 'en' ? 'Academic' : 'Acadêmico'}</a>
+            </nav>
 
-          <div className="topbar-controls">
+            <div className="controls-divider" aria-hidden="true" />
+
             <label className="switch">
               <input
                 type="checkbox"
@@ -82,11 +44,12 @@ const App: React.FC = () => {
               />
               <span className="slider round"></span>
             </label>
+
             <div className="language-switch">
               <button
                 type="button"
                 className={`lang-btn ${language === 'en' ? 'active' : ''}`}
-                onClick={() => handleLanguageChange('en')}
+                onClick={() => setLanguage('en')}
                 aria-label="Switch language to English"
                 aria-pressed={language === 'en'}
               >
@@ -95,7 +58,7 @@ const App: React.FC = () => {
               <button
                 type="button"
                 className={`lang-btn ${language === 'pt' ? 'active' : ''}`}
-                onClick={() => handleLanguageChange('pt')}
+                onClick={() => setLanguage('pt')}
                 aria-label="Mudar idioma para Português"
                 aria-pressed={language === 'pt'}
               >
@@ -106,40 +69,41 @@ const App: React.FC = () => {
         </div>
       </header>
 
-      <main className="page-shell">
-        <section className="hero-card">
-          <div className="hero-avatar-wrap">
+      <main id="top" className="single-page-shell">
+        <section className="open-hero">
+          <div className="hero-left">
+            <div className="hero-eyebrow">
+              <span>{language === 'en' ? 'Computer Science Professor • UERN' : 'Professor de Ciência da Computação • UERN'}</span>
+            </div>
+            <h1>Dr. Anderson Abner de Santana Souza</h1>
+            <p className="hero-lead">
+              {language === 'en'
+                ? 'Researching Mobile Robotics, Computer Vision, Stochastic Filtering, Embedded Systems & Artificial Intelligence.'
+                : 'Pesquisando Robótica Móvel, Visão Computacional, Filtragem Estocástica, Sistemas Embarcados & Inteligência Artificial.'}
+            </p>
+            <div className="hero-inline-meta">
+              <span>🤖 {language === 'en' ? 'LAR Robotics Lab' : 'Laboratório LAR'}</span>
+              <span aria-hidden="true">·</span>
+              <span>🎓 Ph.D. UFRN</span>
+            </div>
+          </div>
+
+          <div className="hero-visual">
             <img
               className="imageabner"
               src={abner}
               alt="Dr. Anderson Abner de Santana Souza"
               decoding="async"
             />
-          </div>
-          <div className="hero-info">
-            <div className="hero-badge-row">
-              <span className="hero-badge">
-                {language === 'en' ? 'Academic Portfolio • UERN' : 'Portfólio Acadêmico • UERN'}
-              </span>
-              <span className="telemetry-pill">
-                <span className="telemetry-dot" aria-hidden="true" />
-                LAR • ROBOTICS ONLINE
-              </span>
-            </div>
-            <h2>Dr. Anderson Abner de Santana Souza</h2>
-            <p className="hero-role">
-              {language === 'en' ? 'Computer Science Professor | UERN' : 'Professor de Ciência da Computação | UERN'}
-            </p>
-            <div className="hero-tags">
-              <span>🤖 {language === 'en' ? 'Mobile Robotics' : 'Robótica Móvel'}</span>
-              <span>👁️ {language === 'en' ? 'Computer Vision' : 'Visão Computacional'}</span>
-              <span>✨ {language === 'en' ? 'AI & Embedded Systems' : 'IA & Sistemas Embarcados'}</span>
+            <div className="hero-mascot-float">
+              <RobotMascot />
             </div>
           </div>
-          <RobotMascot />
         </section>
 
-        <section className="content">{renderComponent()}</section>
+        <Sobre />
+        <Projetos />
+        <Academico />
       </main>
 
       <footer className="footer">

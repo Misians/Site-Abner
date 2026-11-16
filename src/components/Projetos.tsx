@@ -65,35 +65,30 @@ const Projetos: React.FC = () => {
   ];
 
   return (
-    <div className="section-stack pjt-img">
-      <div className="section-block">
-        <div className="section-header">
-          <span className="section-pill">🚀 {language === 'en' ? 'Research' : 'Pesquisa'}</span>
-          <h3>{language === 'en' ? 'Projects' : 'Projetos'}</h3>
-        </div>
-
-        <div className="divproj bento-grid">
-          {projects.map((proj) => (
-            <article key={proj.title} className="projetos">
-              <div className="card-top-row">
-                <span className="card-tag">{proj.tag}</span>
-              </div>
-              <div className="ano2">
-                <h5>{proj.title}</h5>
-              </div>
-              <p>{proj.description}</p>
-            </article>
-          ))}
-        </div>
+    <section id="projetos" className="editorial-section">
+      <div className="editorial-heading">
+        <span className="section-kicker">03 — {language === 'en' ? 'Projects' : 'Projetos'}</span>
+        <h2>{language === 'en' ? 'Research Projects & LAR' : 'Projetos de Pesquisa & LAR'}</h2>
       </div>
 
-      <div className="section-block lar-showcase">
-        <div className="section-header">
-          <span className="section-pill">🤖 {language === 'en' ? 'Laboratory' : 'Laboratório'}</span>
-          <h3>LAR (LABORATÓRIO DE APRENDIZAGEM E ROBÓTICA)</h3>
+      <div className="editorial-list">
+        {projects.map((proj) => (
+          <article key={proj.title} className="editorial-row">
+            <span className="row-tag">{proj.tag}</span>
+            <div className="row-body">
+              <h3>{proj.title}</h3>
+              <p>{proj.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div className="lar-gallery-block">
+        <div className="lar-gallery-head">
+          <h3>LAR — LABORATÓRIO DE APRENDIZAGEM E ROBÓTICA</h3>
         </div>
-        <div className="images">
-          <figure className="polaroid-card">
+        <div className="gallery-grid">
+          <figure className="gallery-figure">
             <img
               src={laboratorio}
               loading="lazy"
@@ -110,7 +105,7 @@ const Projetos: React.FC = () => {
                 : 'Laboratório de Aprendizagem e Robótica (LAR) — UERN'}
             </figcaption>
           </figure>
-          <figure className="polaroid-card">
+          <figure className="gallery-figure">
             <img
               src={abner}
               loading="lazy"
@@ -129,7 +124,7 @@ const Projetos: React.FC = () => {
           </figure>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

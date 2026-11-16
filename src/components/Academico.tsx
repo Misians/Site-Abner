@@ -5,22 +5,18 @@ export const Academico: React.FC = () => {
   const { language } = useLanguage();
 
   return (
-    <div className="section-stack info-acad">
-      <div className="section-header">
-        <span className="section-pill">🎓 {language === 'en' ? 'Timeline' : 'Trajetória'}</span>
-        <h3>{language === 'en' ? 'Academic Background/Qualifications' : 'Formação acadêmica/titulação'}</h3>
+    <section id="academico" className="editorial-section">
+      <div className="editorial-heading">
+        <span className="section-kicker">04 — {language === 'en' ? 'Academic' : 'Acadêmico'}</span>
+        <h2>{language === 'en' ? 'Academic Background/Qualifications' : 'Formação acadêmica/titulação'}</h2>
       </div>
 
-      <div className="timeline">
-        <div className="formacao">
-          <div className="timeline-marker" aria-hidden="true" />
-          <div className="timeline-card">
-            <div className="ano">
-              <h5>2008 - 2012</h5>
-            </div>
+      <div className="editorial-list">
+        <article className="editorial-row">
+          <span className="row-year">2008 – 2012</span>
+          <div className="row-body">
+            <h3>{language === 'en' ? 'Ph.D. in Electrical Engineering' : 'Doutorado em Engenharia Elétrica'}</h3>
             <p>
-              {language === 'en' ? 'Ph.D. in Electrical Engineering.' : 'Doutorado em Engenharia Elétrica.'}
-              <br />
               {language === 'en'
                 ? 'Federal University of Rio Grande do Norte, UFRN, Brazil.'
                 : 'Universidade Federal do Rio Grande do Norte, UFRN, Brasil.'}
@@ -40,17 +36,13 @@ export const Academico: React.FC = () => {
               {language === 'en' ? 'Major area: Others' : 'Grande área: Outros'}
             </p>
           </div>
-        </div>
+        </article>
 
-        <div className="formacao">
-          <div className="timeline-marker" aria-hidden="true" />
-          <div className="timeline-card">
-            <div className="ano">
-              <h5>2002 - 2008</h5>
-            </div>
+        <article className="editorial-row">
+          <span className="row-year">2002 – 2008</span>
+          <div className="row-body">
+            <h3>{language === 'en' ? "Master's in Electrical Engineering" : 'Mestrado em Engenharia Elétrica'}</h3>
             <p>
-              {language === 'en' ? "Master's in Electrical Engineering." : 'Mestrado em Engenharia Elétrica.'}
-              <br />
               {language === 'en'
                 ? 'Federal University of Rio Grande do Norte, UFRN, Brazil.'
                 : 'Universidade Federal do Rio Grande do Norte, UFRN, Brasil.'}
@@ -74,17 +66,13 @@ export const Academico: React.FC = () => {
               {language === 'en' ? 'Major area: Others' : 'Grande área: Outros'}
             </p>
           </div>
-        </div>
+        </article>
 
-        <div className="formacao">
-          <div className="timeline-marker" aria-hidden="true" />
-          <div className="timeline-card">
-            <div className="ano">
-              <h5>2001 - 2005</h5>
-            </div>
+        <article className="editorial-row">
+          <span className="row-year">2001 – 2005</span>
+          <div className="row-body">
+            <h3>{language === 'en' ? "Bachelor's in Computer Engineering" : 'Graduação em Engenharia de Computação'}</h3>
             <p>
-              {language === 'en' ? "Bachelor's in Computer Engineering." : 'Graduação em Engenharia de Computação.'}
-              <br />
               {language === 'en'
                 ? 'Federal University of Rio Grande do Norte, UFRN, Brazil.'
                 : 'Universidade Federal do Rio Grande do Norte, UFRN, Brasil.'}
@@ -102,42 +90,36 @@ export const Academico: React.FC = () => {
                 : 'Bolsista do(a): Conselho Nacional de Desenvolvimento Científico e Tecnológico, CNPq, Brasil.'}
             </p>
           </div>
-        </div>
+        </article>
 
-        <div className="formacao">
-          <div className="timeline-marker" aria-hidden="true" />
-          <div className="timeline-card">
-            <div className="ano">
-              <h5>1996 - 2000</h5>
-            </div>
-            <p>
+        <article className="editorial-row">
+          <span className="row-year">1996 – 2000</span>
+          <div className="row-body">
+            <h3>
               {language === 'en'
-                ? 'Technical/Professional Course in Electromechanics.'
-                : 'Curso técnico/profissionalizante em Eletromecânica.'}
-              <br />
+                ? 'Technical/Professional Course in Electromechanics'
+                : 'Curso técnico/profissionalizante em Eletromecânica'}
+            </h3>
+            <p>
               {language === 'en'
                 ? 'Federal Center for Technological Education of Rio Grande do Norte, CEFET-RN, Brazil.'
                 : 'Centro Federal de Educação Tecnológica do Rio Grande do Norte, CEFET-RN, Brasil.'}
             </p>
           </div>
-        </div>
+        </article>
 
-        <div className="formacao">
-          <div className="timeline-marker" aria-hidden="true" />
-          <div className="timeline-card">
-            <div className="ano">
-              <h5>1996 - 2000</h5>
-            </div>
+        <article className="editorial-row">
+          <span className="row-year">1996 – 2000</span>
+          <div className="row-body">
+            <h3>{language === 'en' ? 'High School (2nd degree)' : 'Ensino Médio (2º grau)'}</h3>
             <p>
-              {language === 'en' ? 'High School (2nd degree).' : 'Ensino Médio (2º grau).'}
-              <br />
               {language === 'en'
                 ? 'Federal Center for Technological Education of Rio Grande do Norte, CEFET-RN, Brazil.'
                 : 'Centro Federal de Educação Tecnológica do Rio Grande do Norte, CEFET-RN, Brasil.'}
             </p>
           </div>
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
   );
 };

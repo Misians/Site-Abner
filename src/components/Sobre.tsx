@@ -48,59 +48,50 @@ const Sobre: React.FC = () => {
   ];
 
   return (
-    <div className="section-stack">
-      <div className="section-block">
-        <div className="section-header">
-          <span className="section-pill">✨ {language === 'en' ? 'Profile' : 'Perfil'}</span>
-          <h3>{language === 'en' ? 'About' : 'Sobre'}</h3>
+    <>
+      <section id="sobre" className="editorial-section">
+        <div className="editorial-heading">
+          <span className="section-kicker">01 — {language === 'en' ? 'About' : 'Sobre'}</span>
+          <h2>{language === 'en' ? 'Biography & Research Focus' : 'Biografia & Áreas de Pesquisa'}</h2>
         </div>
 
-        <div className="bio-card">
-          <p className="text-abner">
+        <div className="editorial-bio">
+          <p>
             {language === 'en'
               ? "Ph.D. in Computer Engineering from the Federal University of Rio Grande do Norte (UFRN), Natal RN Brazil (2012), Master's in Electrical Engineering from the Federal University of Rio Grande do Norte (UFRN), Natal RN Brazil (2008), Bachelor's in Computer Engineering from the Federal University of Rio Grande do Norte (UFRN), Natal RN Brazil (2005). Currently an Adjunct Professor in the Department of Computing at the State University of Rio Grande do Norte, Natal Campus. Mainly works in the following areas: mobile robotics, computer vision, stochastic filtering, embedded systems, and artificial intelligence."
               : 'Doutorado em Engenharia da Computação pela Universidade Federal do Rio Grande do Norte (UFRN), Natal RN Brasil (2012), Mestrado em Engenharia Elétrica pela Universidade Federal do Rio Grande do Norte (UFRN), Natal RN Brasil (2008), Graduação em Engenharia de Computação pela Universidade Federal do Rio Grande do Norte (UFRN), Natal RN Brasil (2005). Atualmente é Professor Adjunto do Departamento de Computação da Universidade do Estado do Rio Grande do Norte, Campus Natal. Atua principalmente nos seguintes temas: robótica móvel, visão computacional, filtragem estocástica, sistemas embarcados e inteligência artificial.'}
           </p>
-        </div>
-      </div>
 
-      <div className="section-block">
-        <div className="section-header">
-          <span className="section-pill">🔬 {language === 'en' ? 'Focus' : 'Foco'}</span>
-          <h3>{language === 'en' ? 'Research Areas & Interests' : 'Áreas de Pesquisa e Interesse'}</h3>
+          <div className="interest-strip" aria-label={language === 'en' ? 'Research Areas & Interests' : 'Áreas de Pesquisa e Interesse'}>
+            {interests.map((item) => (
+              <span key={item.label} className="interest-item">
+                <span aria-hidden="true">{item.icon}</span>
+                {item.label}
+              </span>
+            ))}
+          </div>
         </div>
-        <div className="interesses">
-          {interests.map((item) => (
-            <div key={item.label} className="interest-card">
-              <span className="interest-icon" aria-hidden="true">{item.icon}</span>
-              <h4>{item.label}</h4>
-            </div>
-          ))}
-        </div>
-      </div>
+      </section>
 
-      <div className="section-block">
-        <div className="section-header">
-          <span className="section-pill">📚 {language === 'en' ? 'Papers' : 'Artigos'}</span>
-          <h3>{language === 'en' ? 'Publications and participations' : 'Publicações e participações'}</h3>
+      <section id="publicacoes" className="editorial-section">
+        <div className="editorial-heading">
+          <span className="section-kicker">02 — {language === 'en' ? 'Publications' : 'Publicações'}</span>
+          <h2>{language === 'en' ? 'Publications and participations' : 'Publicações e participações'}</h2>
         </div>
 
-        <div className="divproj">
+        <div className="editorial-list">
           {publications.map((pub) => (
-            <article key={pub.num} className="projetos pub-card">
-              <div className="card-top-row">
-                <span className="card-index">{pub.num}</span>
-                <span className="card-tag">{language === 'en' ? 'Publication' : 'Publicação'}</span>
+            <article key={pub.num} className="editorial-row">
+              <span className="row-number">{pub.num}</span>
+              <div className="row-body">
+                <h3>{pub.title}</h3>
+                <p>{pub.description}</p>
               </div>
-              <div className="ano2">
-                <h5>{pub.title}</h5>
-              </div>
-              <p>{pub.description}</p>
             </article>
           ))}
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 };
 

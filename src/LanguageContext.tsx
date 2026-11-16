@@ -1,12 +1,6 @@
 // LanguageContext.tsx
-import React, { createContext, useState, ReactNode, useContext } from 'react';
-
-type LanguageContextType = {
-  language: string;
-  setLanguage: (language: string) => void;
-};
-
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+import React, { useState, ReactNode } from 'react';
+import { LanguageContext } from './useLanguage';
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<string>('en');
@@ -16,12 +10,4 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
       {children}
     </LanguageContext.Provider>
   );
-};
-
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
 };

@@ -9,6 +9,7 @@ import './App.css';
 import { Academico } from './components/Academico';
 import Sobre from './components/Sobre';
 import Projetos from './components/Projetos';
+import RobotMascot from './components/RobotMascot';
 import { useLanguage } from './useLanguage';
 
 const App: React.FC = () => {
@@ -116,9 +117,15 @@ const App: React.FC = () => {
             />
           </div>
           <div className="hero-info">
-            <span className="hero-badge">
-              {language === 'en' ? 'Academic Portfolio • UERN' : 'Portfólio Acadêmico • UERN'}
-            </span>
+            <div className="hero-badge-row">
+              <span className="hero-badge">
+                {language === 'en' ? 'Academic Portfolio • UERN' : 'Portfólio Acadêmico • UERN'}
+              </span>
+              <span className="telemetry-pill">
+                <span className="telemetry-dot" aria-hidden="true" />
+                LAR • ROBOTICS ONLINE
+              </span>
+            </div>
             <h2>Dr. Anderson Abner de Santana Souza</h2>
             <p className="hero-role">
               {language === 'en' ? 'Computer Science Professor | UERN' : 'Professor de Ciência da Computação | UERN'}
@@ -129,6 +136,7 @@ const App: React.FC = () => {
               <span>✨ {language === 'en' ? 'AI & Embedded Systems' : 'IA & Sistemas Embarcados'}</span>
             </div>
           </div>
+          <RobotMascot />
         </section>
 
         <section className="content">{renderComponent()}</section>

@@ -9,7 +9,7 @@ import './App.css';
 import { Academico } from './components/Academico';
 import Sobre from './components/Sobre';
 import Projetos from './components/Projetos';
-import { useLanguage } from './LanguageContext';
+import { useLanguage } from './useLanguage';
 
 const App: React.FC = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);

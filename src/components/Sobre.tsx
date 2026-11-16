@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLanguage } from '../LanguageContext';
+import { useLanguage } from '../useLanguage';
 
 const Sobre: React.FC = () => {
   const { language } = useLanguage();
@@ -53,7 +53,7 @@ const Sobre: React.FC = () => {
         
         <div className="projetos">
           <div className="ano2">
-            <h5>{language === 'en' ? 'A Validation Study of the Human Perception ofVirtual Characters’ Features' : 'Um estudo de validação da percepção humana das características dos personagens virtuais'}</h5>
+            <h5>{language === 'en' ? 'A Validation Study of the Human Perception of Virtual Characters’ Features' : 'Um estudo de validação da percepção humana das características dos personagens virtuais'}</h5>
           </div>
           <p>
             {language === 'en'

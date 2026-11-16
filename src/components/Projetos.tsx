@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLanguage } from '../LanguageContext';
+import { useLanguage } from '../useLanguage';
 import laboratorio from './assets/IMG_1991.jpg'
 import abner from './assets/IMG_2036.jpg'
 const Projetos: React.FC = () => {
@@ -73,7 +73,7 @@ const Projetos: React.FC = () => {
         </div> */}
       </div>
       
-      <h3>LAR (LABORATORIO DE APRENDIZAGEM E ROBÓTICA)</h3>
+      <h3>LAR (LABORATÓRIO DE APRENDIZAGEM E ROBÓTICA)</h3>
       <div className="images">
         <img src={laboratorio} alt="" />
         <img src={abner} alt="" />

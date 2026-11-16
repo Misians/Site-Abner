@@ -61,22 +61,18 @@ const Projetos: React.FC = () => {
               : 'O problema de inversão de autovalores traz consigo uma área diversa, cheia de interesses de pesquisas e atividades. Entre os desenvolvimentos correntes, o problema inverso quadrático de autovalores QIEP é particularmente mais importante e desafiador com várias questões ainda em aberto. A ênfase principal desta pesquisa proposta é levar em consideração uma restrição crítica que aparece na prática: em um sistema físico grande e complexo é geralmente impossível obter informação no seu espectro de distribuição completo. Além disso, valores relacionados com termos de altas frequências num modelo de elementos finitos são geralmente suscetíveis a erros devido à largura de faixa finita dos equipamentos de medida. A informação espectral, então, não pode nem deve ser usada em toda sua extensão. Por essas razões, é recomendável considerar o problema inverso de autovalores quando apenas uma parte dos dados está estabelecida. A base matemática e desenvolvimento de ferramentas que propiciem a resolução de problemas relacionados serão desenvolvidos durante a vigência do presente projeto, em conjunto com a equipe do pesquisador visitante e dos alunos e professores envolvidos, da UFRN.'
             }</p>
         </div>
-        {/* <div className="projetos">
-          <div className="ano2">
-            <h5>{language === 'en' ? 'Development of Autonomous Navigation System for a Team of CellBots' : 'Desenvolvimento Sistema de Navegação Autônoma para um Time de CellBots'}</h5>
-          </div>
-          <p>
-            {language === 'en'
-              ? 'High School. Federal Center for Technological Education of Rio Grande do Norte, CEFET-RN, Brazil.'
-              : 'Ensino Médio (2º grau). Centro Federal de Educação Tecnológica do Rio Grande do Norte, CEFET-RN, Brasil.'}
-          </p>
-        </div> */}
       </div>
       
       <h3>LAR (LABORATÓRIO DE APRENDIZAGEM E ROBÓTICA)</h3>
       <div className="images">
-        <img src={laboratorio} alt="" />
-        <img src={abner} alt="" />
+        <img
+          src={laboratorio}
+          alt={language === 'en' ? 'Learning and Robotics Laboratory (LAR)' : 'Laboratório de Aprendizagem e Robótica (LAR)'}
+        />
+        <img
+          src={abner}
+          alt={language === 'en' ? 'Dr. Anderson Abner at the Learning and Robotics Laboratory' : 'Dr. Anderson Abner no Laboratório de Aprendizagem e Robótica'}
+        />
 
       </div>
     </div>

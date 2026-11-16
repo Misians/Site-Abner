@@ -33,36 +33,68 @@ const App: React.FC = () => {
     setLanguage(lang);
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, section: string) => {
+    e.preventDefault();
+    setActiveComponent(section);
+  };
+
   return (
     <div className={`app ${theme}`}>
       <div className="corpo">
-        <div className="menu">
-          <a href="#" onClick={() => setActiveComponent('Sobre')}>
+        <nav className="menu" aria-label={language === 'en' ? 'Main navigation' : 'Navegação principal'}>
+          <a
+            href="#sobre"
+            aria-current={activeComponent === 'Sobre' ? 'page' : undefined}
+            onClick={(e) => handleNavClick(e, 'Sobre')}
+          >
             {language === 'en' ? 'About' : 'Sobre'}
           </a>
-          <a href="#" onClick={() => setActiveComponent('Projetos')}>
+          <a
+            href="#projetos"
+            aria-current={activeComponent === 'Projetos' ? 'page' : undefined}
+            onClick={(e) => handleNavClick(e, 'Projetos')}
+          >
             {language === 'en' ? 'Projects' : 'Projetos'}
           </a>
-          <a href="#" onClick={() => setActiveComponent('Acadêmico')}>
+          <a
+            href="#academico"
+            aria-current={activeComponent === 'Acadêmico' ? 'page' : undefined}
+            onClick={(e) => handleNavClick(e, 'Acadêmico')}
+          >
             {language === 'en' ? 'Academic' : 'Acadêmico'}
           </a>
-          {/* <a href="#" onClick={() => setActiveComponent('Interesses')}>
-            {language === 'en' ? 'Research Areas' : 'Áreas de Pesquisa'}
-          </a>
-          <a href="#" onClick={() => setActiveComponent('Contato')}>
-            {language === 'en' ? 'Publicações' : 'Publicações'}
-          </a> */}
           <label className="switch">
-            <input type="checkbox" checked={theme === 'dark'} onChange={toggleTheme} />
+            <input
+              type="checkbox"
+              checked={theme === 'dark'}
+              onChange={toggleTheme}
+              aria-label={language === 'en' ? 'Toggle dark mode' : 'Alternar modo escuro'}
+            />
             <span className="slider round"></span>
           </label>
           <div className="language-switch">
-            <img src={ingles} alt="English" onClick={() => handleLanguageChange('en')} />
-            <img src={brasil} alt="Português" onClick={() => handleLanguageChange('pt')} />
+            <button
+              type="button"
+              className="lang-btn"
+              onClick={() => handleLanguageChange('en')}
+              aria-label="Switch language to English"
+              aria-pressed={language === 'en'}
+            >
+              <img src={ingles} alt="English" />
+            </button>
+            <button
+              type="button"
+              className="lang-btn"
+              onClick={() => handleLanguageChange('pt')}
+              aria-label="Mudar idioma para Português"
+              aria-pressed={language === 'pt'}
+            >
+              <img src={brasil} alt="Português" />
+            </button>
           </div>
-        </div>
+        </nav>
         <div className="infos">
-          <img className='imageabner' src={abner} alt="" />
+          <img className='imageabner' src={abner} alt="Dr. Anderson Abner de Santana Souza" />
           <div className="info-abner">
             <div className="block">
               <div className="nome">
